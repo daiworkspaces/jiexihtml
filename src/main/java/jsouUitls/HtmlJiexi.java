@@ -10,16 +10,15 @@ import java.util.regex.Pattern;
 
 public class HtmlJiexi {
 
-    public  String jiexi(String html){
+    public  String jiexi(String html,String pattern){
         Document doc = Jsoup.parse(html);
         String tds = doc.select("td").html();
         List<String> ls = new ArrayList<String>();
-        String pattern = "value=\"(.*?)\"";
+       // String pattern ="name=\"outboundFlight\"\\s+value=\"([^\"]*)\"";
         Pattern r = Pattern.compile(pattern);
         Matcher m = r.matcher(tds);
         while (m.find())
-            //截取value 后面的数据，添加为list
-            ls.add(m.group().substring(7,25));
+            ls.add(m.group(1));
 
         //随机取值
         int index = (int) (Math.random()* ls.size());
@@ -104,8 +103,9 @@ public class HtmlJiexi {
                 " </body>\n" +
                 "</html>";
 
+        String pattern = "name=\"outboundFlight\"\\s+value=\"([^\"]*)\"";
         HtmlJiexi aa = new HtmlJiexi();
-        String a = aa.jiexi(html);
+        String a = aa.jiexi(html,pattern);
 
         System.out.println(a);
     }
