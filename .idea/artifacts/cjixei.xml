@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="cjixei">
+    <output-path>$PROJECT_DIR$/out/artifacts/cjixei</output-path>
+    <root id="archive" name="cjixei.jar">
+      <element id="module-output" name="jiexihtml" />
+    </root>
+  </artifact>
+</component>
