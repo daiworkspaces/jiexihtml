@@ -41,69 +41,73 @@ public class HtmlJiexi {
                 "  <blockquote> \n" +
                 "   <!-- JSVerification Server Option --> \n" +
                 "   <script src=\"/WebTours/chooseFlightValidate.js\">document.write(\"Included JS file not found\")</script>\n" +
-                "   <form method=\"post\" action=\"reservations.pl\" enctype=\"application/x-www-form-urlencoded\"> \n" +
-                "    <center> \n" +
-                "     <!-- From Denver (0) To Paris (4) --> \n" +
-                "     <blockquote>\n" +
-                "      Flight departing from \n" +
-                "      <b>Denver</b> to \n" +
-                "      <b>Paris</b> on \n" +
-                "      <b>01/26/2019</b>\n" +
-                "      <br>\n" +
-                "      <br>\n" +
-                "     </blockquote>\n" +
-                "     <table cellspacing=\"2\" border=\"0\" width=\"50%\"> \n" +
-                "      <tbody>\n" +
-                "       <tr bgcolor=\"#5E7884\">\n" +
-                "        <td align=\"center\"><font color=\"white\"><b>Flight</b></font> </td>\n" +
-                "        <td align=\"center\"><font color=\"white\"><b>Departure time</b> </font></td>\n" +
-                "        <td align=\"center\"><font color=\"white\"><b>Cost</b> </font></td>\n" +
-                "       </tr>\n" +
-                "       <tr bgcolor=\"#EFF2F7\">\n" +
-                "        <td align=\"center\"><input type=\"radio\" name=\"outboundFlight\" value=\"040;350;01/26/2019\" checked>Blue Sky Air 040</td>\n" +
-                "        <td align=\"center\">8am</td>\n" +
-                "        <td align=\"center\">$ 350</td>\n" +
-                "       </tr>\n" +
-                "       <tr bgcolor=\"#EFF2F7\">\n" +
-                "        <td align=\"center\"><input type=\"radio\" name=\"outboundFlight\" value=\"041;312;01/26/2019\">Blue Sky Air 041</td>\n" +
-                "        <td align=\"center\">1pm</td>\n" +
-                "        <td align=\"center\">$ 312</td>\n" +
-                "       </tr>\n" +
-                "       <tr bgcolor=\"#EFF2F7\">\n" +
-                "        <td align=\"center\"><input type=\"radio\" name=\"outboundFlight\" value=\"042;331;01/26/2019\">Blue Sky Air 042</td>\n" +
-                "        <td align=\"center\">5pm</td>\n" +
-                "        <td align=\"center\">$ 331</td>\n" +
-                "       </tr>\n" +
-                "       <tr bgcolor=\"#EFF2F7\">\n" +
-                "        <td align=\"center\"><input type=\"radio\" name=\"outboundFlight\" value=\"043;287;01/26/2019\">Blue Sky Air 043</td>\n" +
-                "        <td align=\"center\">11pm</td>\n" +
-                "        <td align=\"center\">$ 287</td>\n" +
-                "       </tr>\n" +
-                "      </tbody>\n" +
-                "     </table> \n" +
-                "     <input type=\"hidden\" name=\"numPassengers\" value=\"1\">\n" +
-                "     <input type=\"hidden\" name=\"advanceDiscount\" value=\"0\">\n" +
-                "     <input type=\"hidden\" name=\"seatType\" value=\"Coach\">\n" +
-                "     <input type=\"hidden\" name=\"seatPref\" value=\"None\"> \n" +
-                "     <p></p>\n" +
-                "     <center>\n" +
-                "      <table width=\"80%\" cellspacing=\"1\">\n" +
-                "       <tbody>\n" +
-                "        <tr>\n" +
-                "         <td align=\"center\"> <input type=\"image\" name=\"reserveFlights\" src=\"/WebTours/images/button_next.gif\" border=\"0\"> </td>\n" +
-                "         <td>&nbsp;</td>\n" +
-                "         <td align=\"center\"></td>\n" +
-                "        </tr>\n" +
-                "       </tbody>\n" +
-                "      </table>\n" +
-                "     </center>\n" +
-                "    </center>\n" +
+                "   <form method=\"post\" action=\"reservations.pl\" enctype=\"application/x-www-form-urlencoded\" onsubmit=\" return validateForm(this);\" name=\"DestForm\"> \n" +
+                "    <input type=\"hidden\" name=\"advanceDiscount\" value=\"0\">\n" +
+                "    <table border=\"0\" cellspacing=\"5\">\n" +
+                "     <tbody>\n" +
+                "      <tr>\n" +
+                "       <td align=\"left\">Departure City :</td> \n" +
+                "       <td><select name=\"depart\"> <option selected value=\"Denver\">Denver</option> <option value=\"Frankfurt\">Frankfurt</option> <option value=\"London\">London</option> <option value=\"Los Angeles\">Los Angeles</option> <option value=\"Paris\">Paris</option> <option value=\"Portland\">Portland</option> <option value=\"San Francisco\">San Francisco</option> <option value=\"Seattle\">Seattle</option> <option value=\"Sydney\">Sydney</option> <option value=\"Zurich\">Zurich</option> </select></td> \n" +
+                "       <td align=\"left\">Departure Date :</td> \n" +
+                "       <td><input type=\"text\" name=\"departDate\" value=\"01/29/2019\" size=\"10\" maxlength=\"10\"> \n" +
+                "        <!-- Departure Date Applet --> \n" +
+                "        <applet code=\"FormDateUpdate.class\" mayscript width=\"26\" height=\"28\" border=\"0\"> \n" +
+                "         <param NAME=\"CalenderTitle\" VALUE=\"Select Departure Date\"> \n" +
+                "         <param NAME=\"HtmlFormIndex\" VALUE=\"0\"> \n" +
+                "         <param NAME=\"HtmlEditIndex\" VALUE=\"2\"> \n" +
+                "         <param NAME=\"AutoClose\" VALUE=\"1\"> \n" +
+                "         <param NAME=\"Label\" VALUE=\"...\"> \n" +
+                "        </applet> </td>\n" +
+                "      </tr> \n" +
+                "      <tr>\n" +
+                "       <td align=\"left\">Arrival City :</td> \n" +
+                "       <td><select name=\"arrive\"> <option selected value=\"Denver\">Denver</option> <option value=\"Frankfurt\">Frankfurt</option> <option value=\"London\">London</option> <option value=\"Los Angeles\">Los Angeles</option> <option value=\"Paris\">Paris</option> <option value=\"Portland\">Portland</option> <option value=\"San Francisco\">San Francisco</option> <option value=\"Seattle\">Seattle</option> <option value=\"Sydney\">Sydney</option> <option value=\"Zurich\">Zurich</option> </select></td> \n" +
+                "       <td align=\"left\">Return Date :</td> \n" +
+                "       <td><input type=\"text\" name=\"returnDate\" value=\"01/30/2019\" size=\"10\" maxlength=\"10\"> \n" +
+                "        <!-- Return Date Applet --> \n" +
+                "        <applet code=\"FormDateUpdate.class\" mayscript width=\"26\" height=\"28\" border=\"0\"> \n" +
+                "         <param NAME=\"CalenderTitle\" VALUE=\"Select Return Date\"> \n" +
+                "         <param NAME=\"HtmlFormIndex\" VALUE=\"0\"> \n" +
+                "         <param NAME=\"HtmlEditIndex\" VALUE=\"4\"> \n" +
+                "         <param NAME=\"AutoClose\" VALUE=\"1\"> \n" +
+                "         <param NAME=\"Label\" VALUE=\"...\"> \n" +
+                "        </applet> </td>\n" +
+                "      </tr> \n" +
+                "      <tr>\n" +
+                "       <td align=\"left\">No. of Passengers : </td> \n" +
+                "       <td><input type=\"text\" name=\"numPassengers\" value=\"1\" size=\"3\" maxlength=\"8\"></td> \n" +
+                "       <td colspan=\"2\"><label><input type=\"checkbox\" name=\"roundtrip\" value=\"on\">Roundtrip ticket</label></td>\n" +
+                "      </tr> \n" +
+                "      <tr>\n" +
+                "       <td>Seating Preference</td> \n" +
+                "       <td></td> \n" +
+                "       <td>Type of Seat</td>\n" +
+                "      </tr> \n" +
+                "      <tr>\n" +
+                "       <td><label><input type=\"radio\" name=\"seatPref\" value=\"Aisle\">Aisle</label><br> <label><input type=\"radio\" name=\"seatPref\" value=\"Window\">Window</label><br> <label><input type=\"radio\" name=\"seatPref\" value=\"None\" checked>None</label><br></td> \n" +
+                "       <td></td> \n" +
+                "       <td><label><input type=\"radio\" name=\"seatType\" value=\"First\">First</label><br> <label><input type=\"radio\" name=\"seatType\" value=\"Business\">Business</label><br> <label><input type=\"radio\" name=\"seatType\" value=\"Coach\" checked>Coach</label><br></td>\n" +
+                "      </tr> \n" +
+                "      <tr>\n" +
+                "       <td height=\"10\"></td>\n" +
+                "      </tr> \n" +
+                "      <tr>\n" +
+                "       <td align=\"center\" colspan=\"4\"><input type=\"image\" name=\"findFlights\" src=\"/WebTours/images/button_next.gif\" border=\"0\"></td>\n" +
+                "      </tr>\n" +
+                "     </tbody>\n" +
+                "    </table>\n" +
+                "    <div>\n" +
+                "     <input type=\"hidden\" name=\".cgifields\" value=\"roundtrip\">\n" +
+                "     <input type=\"hidden\" name=\".cgifields\" value=\"seatType\">\n" +
+                "     <input type=\"hidden\" name=\".cgifields\" value=\"seatPref\">\n" +
+                "    </div>\n" +
                 "   </form> \n" +
-                "  </blockquote>  \n" +
+                "  </blockquote>   \n" +
                 " </body>\n" +
                 "</html>";
 
         String pattern = "name=\"outboundFlight\"\\s+value=\"([^\"]*)\"";
+       // String pattern ="option selected value="Denver">";
         HtmlJiexi aa = new HtmlJiexi();
         String a = aa.jiexi(html,pattern);
 

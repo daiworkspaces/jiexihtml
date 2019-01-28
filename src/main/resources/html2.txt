@@ -1,76 +1,120 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
- <head> 
-  <title>Flights List</title> 
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
- </head> 
- <body bgcolor="#E0E7F1"> 
-  <style>blockquote {font-family: tahoma; font-size : 10pt}H1 {font-family: tahoma; font-size : 22pt; color: #993333}small {font-family: tahoma; font-size : 8pt}H3 {font-family: tahoma; font-size : 10pt; color: black}TD {font-family: tahoma; font-size : 8pt; color: black}</style>
-  <br>
-  <br>
-  <h1><font color="#003366">&nbsp;&nbsp;<b>Itinerary</b></font></h1>
-  <blockquote>
-   <form method="post" action="itinerary.pl" enctype="application/x-www-form-urlencoded"> 
-    <center> 
-     <table border="0" width="85%" cellspacing="0"> 
-      <tbody>
-       <tr bgcolor="#5E7884"> 
-        <td colspan="4" align="center"><font color="white"><b>test1 testlastnam 's Flight Transaction Summary</b></font></td>
-       </tr> 
-       <!-- Flight #1 --> 
-       <tr bgcolor="#EFF2F7"> 
-        <td width="5%" rowspan="2" align="left" valign="top"> <b> <label><input type="checkbox" name="1" value="on"></label></b> <input type="hidden" name="flightID" value="197964530-794-tt"> </td> 
-        <td width="45%" valign="top"> <b>&nbsp;&nbsp;A Coach class ticket for :</b><br> 
-         <center>
-          <table border="0" width="85%">
-           <tbody>
-            <tr>
-             <td> <li><i>test1 testlastnam </i></li><li><i><i></i> </i></li></td>
-            </tr>
-           </tbody>
-          </table>
-         </center> </td> 
-        <td width="5%">.<br>.<br>.<br>.</td> 
-        <td width="45%" valign="top"><b>Invoice sent to:</b><br> 
-         <center> 
-          <table width="80%" cellspacing="0"> 
-           <tbody>
-            <tr> 
-             <td> test1 testlastnam <br> street<br> tokeyo<br> <br> Total Charge: $ 331 <br> (CC: x-5345) </td> 
-            </tr> 
-           </tbody>
-          </table> 
-         </center> </td> 
-       </tr> 
-       <tr bgcolor="#EFF2F7"> 
-        <td colspan="3"> <b>Flight Details:</b><br> 
-         <center>
-           01/26/2019 : 5pm : Flight 042 leaves Denver for Paris.
-          <br> 
-         </center> </td> 
-       </tr> 
-       <tr bgcolor="#EFF2F7"> 
-        <td colspan="4"> 
-         <hr> </td> 
-       </tr> 
-       <tr> 
-        <td align="center" colspan="4"> <b>A total of 1 scheduled flights.</b> </td> 
-       </tr> 
-      </tbody>
-     </table> 
-     <table width="87%" border="0" cellspacing="0"> 
-      <tbody>
-       <tr> 
-        <td align="left" width="50%"> <input type="image" name="removeFlights" src="/WebTours/images/cancelreservation.gif" border="0"></td> 
-        <td align="right" width="50%"> <input type="image" name="removeAllFlights" src="/WebTours/images/cancelallreservations.gif" border="0"></td> 
-       </tr>
-      </tbody>
-     </table> 
-     <div>
-      <input type="hidden" name=".cgifields" value="1">
-     </div> 
-    </center>
-   </form>  
-  </blockquote>
- </body>
+<head>
+<title>Flights List</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="#E0E7F1">
+<style>blockquote {font-family: tahoma; font-size : 10pt}H1 {font-family: tahoma; font-size : 22pt; color: #993333}small {font-family: tahoma; font-size : 8pt}H3 {font-family: tahoma; font-size : 10pt; color: black}TD {font-family: tahoma; font-size : 8pt; color: black}</style><BR><BR><h1><font color=#003366>&nbsp;&nbsp;<b>Itinerary</font></b></h1><blockquote><form method="post" action="itinerary.pl" enctype="application/x-www-form-urlencoded">
+<center>
+<TABLE BORDER=0 WIDTH=85% CELLSPACING=0>
+<TR bgcolor=#5E7884>
+  <TD colspan=4 align=center><font color=white><B>test1 testlastnam
+ 's Flight Transaction Summary</B></color></TD></TR>
+
+<!-- Flight #1 -->
+<TR bgcolor=#EFF2F7>
+  <TD width=5% rowspan=2 align=left valign=top>
+<b>
+<label><input type="checkbox" name="1" value="on" /></label></font></b>
+<input type="hidden" name="flightID" value="131297416-788-tt"  />
+  </TD>
+  <TD width=45% valign=top>
+      <b>&nbsp;&nbsp;A Coach class ticket for :</b><br>
+      <center><table border=0 width=85%><tr><td>
+      <li><i>test1 testlastnam
+      <li><i></i>
+      </td></tr></table></center>
+  </TD>
+  <TD width=5% >.<br>.<br>.<br>.</TD>
+  <TD width=45% valign=top><b>Invoice sent to:</b><br>
+      <center>
+      <Table width=80% cellspacing=0 > <tr> <td>
+          test1 testlastnam
+<br>
+          street<br>
+          tokeyo<br>
+          <br>
+          Total Charge: $ 251 <BR> (CC: x-3545)
+      </td> </tr> </table>
+      </center>
+  </TD>
+</TR>
+<TR bgcolor=#EFF2F7>
+  <TD COLSPAN=3>
+  <b>Flight Details:</b><BR>  <center>
+  01/28/2019
+ :  8am : Flight 030 leaves Denver  for Los Angeles.<br>  </center>
+  </TD>
+</TR>
+
+<TR bgcolor=#EFF2F7>
+  <TD COLSPAN=4>
+  <hr>
+  </TD>
+</TR>
+
+<!-- Flight #1 -->
+<TR bgcolor=#EFF2F7>
+  <TD width=5% rowspan=2 align=left valign=top>
+<b>
+<label><input type="checkbox" name="2" value="on" /></label></font></b>
+<input type="hidden" name="flightID" value="131303716-1564-tt"  />
+  </TD>
+  <TD width=45% valign=top>
+      <b>&nbsp;&nbsp;A Coach class ticket for :</b><br>
+      <center><table border=0 width=85%><tr><td>
+      <li><i>test1 testlastnam
+      <li><i></i>
+      </td></tr></table></center>
+  </TD>
+  <TD width=5% >.<br>.<br>.<br>.</TD>
+  <TD width=45% valign=top><b>Invoice sent to:</b><br>
+      <center>
+      <Table width=80% cellspacing=0 > <tr> <td>
+          test1 testlastnam
+<br>
+          street<br>
+          tokeyo<br>
+          <br>
+          Total Charge: $ 338 <BR> (CC: x-3545)
+      </td> </tr> </table>
+      </center>
+  </TD>
+</TR>
+<TR bgcolor=#EFF2F7>
+  <TD COLSPAN=3>
+  <b>Flight Details:</b><BR>  <center>
+  01/28/2019
+ :  8am : Flight 200 leaves London  for Denver.<br>  </center>
+  </TD>
+</TR>
+
+<TR bgcolor=#EFF2F7>
+  <TD COLSPAN=4>
+  <hr>
+  </TD>
+</TR>
+<TR>
+   <TD align=center COLSPAN=4>
+   <b>A total of 2 scheduled flights.</font></b>
+   </TD>
+</TR>
+</TABLE>
+
+<TABLE WIDTH=87% BORDER=0 CELLSPACING=0>
+<TR>
+<TD align=left width=50% >
+<input type="image" name="removeFlights" src="/WebTours/images/cancelreservation.gif" border="0" /></TD>
+<TD align=right width=50% >
+<input type="image" name="removeAllFlights" src="/WebTours/images/cancelallreservations.gif" border="0" /></TD>
+</TABLE>
+
+<div><input type="hidden" name=".cgifields" value="1"  /><input type="hidden" name=".cgifields" value="2"  /></div></form>
+
+</center>
+
+</body>
 </html>
